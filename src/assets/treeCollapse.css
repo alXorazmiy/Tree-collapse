@@ -1,0 +1,84 @@
+
+.container .box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container .box .tree-collapse {
+    width: 400px;
+    background: #ddd;
+}
+
+.tree .tree-items .tree-items_item {
+    height: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tree .tree-items .tree-items_item:hover {
+    background: #b1b1b1;
+}
+.tree .tree-items .tree-items_item .item-hover {
+    background: transparent;
+    width: 6px ;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+
+.tree .tree-items .tree-items_item:hover .item-hover {
+    background: #6495ED;
+}
+
+.tree .tree-items .tree-items_item .tree-items_item-name {
+    margin: 0 0 0 20px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.tree .tree-items .tree-items_item .tree-items_item-name i {
+    padding-right: 10px;
+    transition: all 0.3s;
+    transform: rotate(0);
+}
+
+.tree .tree-items .child .tree-items_item-name {
+    margin: 0 0 0 50px;
+    font-weight: 500;
+}
+
+.tree .tree-items .child {
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+
+.tree .tree-items .child.active {
+    height: 40px;
+    opacity: 1;
+}
+.tree .tree-items .fa-caret-right.active  {
+   rotate : 90deg;
+
+}
+
+.tree .tree-items .child2  {
+    padding-left: 80px;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s;
+ }
+
+ .tree .tree-items .child2.active  {
+    height: 40px;
+    opacity: 1;
+ }
